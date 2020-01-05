@@ -1,2 +1,2 @@
 # MNITSをもって、Flux.jlを入門する
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FwCqxHGfHAk" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://nbviewer.jupyter.org/github/TsuMakoto/study_fluxjl/blob/master/begginer/1/mnist.ipynb" frameborder="0" allowfullscreen />
