@@ -1,8 +1,12 @@
-cat index.md > README.md
+cat README.md > index.md
 
-for f (begginer/**/*.ipynb) {
+for f in `ls **/README.md`
+do
+  cat $f >> index.md
+done
+
+for f in `ls **/**/*.ipynb`
+do
   `which docker` run --rm --mount type=bind,src=`pwd`,dst=/home/jovyan jupyter/datascience-notebook jupyter nbconvert --to markdown $f
-  mv "$f:r.html" "$f:h/index.html"
-}
-
-`which docker` run --rm --mount type=bind,src=`pwd`,dst=/home/jovyan jupyter/datascience-notebook jupyter nbconvert --to markdown begginer/1/mnist.ipynb
+  mv `dirname $f`/`basename $f .ipynb`.md `dirname $f`/index.md
+done
