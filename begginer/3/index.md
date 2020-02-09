@@ -75,11 +75,6 @@ access_token = JSON.parse(String(result.body))["access_token"]
 
 
 ```julia
-using Printf
-```
-
-
-```julia
 function post(access_token, data, api_base_url) 
     header = ["Content-Type"  => "application/json;charset=UTF-8",
               "Authorization" => "Bearer $(access_token)"]
